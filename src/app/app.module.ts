@@ -23,6 +23,7 @@ const appRoutes: Routes = [
     redirectTo: '/home',
     pathMatch: 'full'
   },
+  { path: 'play', loadChildren: () => import('./play/play.module').then(m => m.PlayModule) },
 ];
 
 @NgModule({
