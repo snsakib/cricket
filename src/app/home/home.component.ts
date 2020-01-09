@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-home",
@@ -8,6 +9,8 @@ import { Component, OnInit } from "@angular/core";
 export class HomeComponent {
   teams = [];
 
+  constructor(private router: Router) {}
+
   onSelectCountry(countryName) {
     if (this.teams.length < 2) {
       this.teams.push(countryName);
@@ -16,7 +19,10 @@ export class HomeComponent {
   }
 
   setTeams() {
-    localStorage.setItem('team1', this.teams[0]);
-    localStorage.setItem('team2', this.teams[1]);
+    if (this.teams.length === 2) {
+      localStorage.setItem("team1", this.teams[0]);
+      localStorage.setItem("team2", this.teams[1]);
+      this.router.navigate(['/toss']);
+    }
   }
 }
