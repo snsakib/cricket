@@ -1,0 +1,22 @@
+h1 {
+  text-align: center;
+}
+
+mat-radio-group {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+  margin-right: 50px;
+}
+
+
+button {
+  display: block;
+  margin: 20px auto;
+
+}

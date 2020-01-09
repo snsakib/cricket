@@ -1,1 +1,10 @@
-<p>toss works!</p>
+<h1>Select Who Will Bat First</h1>
+<mat-radio-group aria-label="Select an option">
+  <mat-radio-button value="{{teams[0]}}" (change)="onSelectTeam($event)">
+    <img src="../../assets/images/{{teams[0]}}.png" alt="{{teams[0]}} flag" />
+  </mat-radio-button>
+  <mat-radio-button value="{{teams[1]}}" (change)="onSelectTeam($event)">
+    <img src="../../assets/images/{{teams[1]}}.png" alt="{{teams[1]}} flag" />
+  </mat-radio-button>
+</mat-radio-group>
+<button mat-raised-button color="primary" (click)="startMatch()">Let's Play</button>
