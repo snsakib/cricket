@@ -2,7 +2,20 @@ h1 {
   text-align: center;
 }
 
-mat-grid-list {
-  width: 500px;
+.flags {
+  margin: 0 auto;
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.flags img {
+  height: 100px;
+  width: 100px;
+  margin: 20px;
+}
+
+button {
+  display: block;
   margin: 0 auto;
 }

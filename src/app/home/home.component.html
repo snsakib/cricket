@@ -1,15 +1,20 @@
 <h1>Let's Play Cricket</h1>
-<mat-grid-list cols="2" rowHeight="1:1" gutterSize="30">
-  <mat-grid-tile>
-    <img src="../../assets/images/bangladesh.png" alt="Bangladesh flag">
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <img src="../../assets/images/india.png" alt="India flag">
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <img src="../../assets/images/australia.png" alt="Australia flag">
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <img src="../../assets/images/england.png" alt="England flag">
-  </mat-grid-tile>
-</mat-grid-list>
+<div class="flags">
+  <div>
+    <div (click)="onSelectCountry('Bangladesh')">
+      <img src="../../assets/images/bangladesh.png" alt="Bangladesh flag" />
+    </div>
+    <div (click)="onSelectCountry('India')">
+      <img src="../../assets/images/india.png" alt="India flag" />
+    </div>
+  </div>
+  <div>
+    <div (click)="onSelectCountry('Australia')">
+      <img src="../../assets/images/australia.png" alt="australia flag" />
+    </div>
+    <div (click)="onSelectCountry('England')">
+      <img src="../../assets/images/england.png" alt="England flag" />
+    </div>
+  </div>
+</div>
+<button mat-raised-button color="primary" (click)="setTeams()">Let's Play</button>
