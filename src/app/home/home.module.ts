@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
-
-
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [HomeComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    MatGridListModule,
   ]
 })
 export class HomeModule { }
