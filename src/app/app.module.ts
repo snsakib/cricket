@@ -6,12 +6,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
+import { TossComponent } from './toss/toss.component';
 import { HomeModule } from './home/home.module';
+import { TossModule } from './toss/toss.module';
 
 const appRoutes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+  },
+  {
+    path: 'toss',
+    component: TossComponent,
   },
   { path: '',
     redirectTo: '/home',
@@ -27,6 +33,7 @@ const appRoutes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     HomeModule,
+    TossModule,
     RouterModule.forRoot(
       appRoutes
     )
