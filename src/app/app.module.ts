@@ -19,11 +19,11 @@ const appRoutes: Routes = [
     path: 'toss',
     component: TossComponent,
   },
+  { path: 'play/:uuid', loadChildren: () => import('./play/play.module').then(m => m.PlayModule) },
   { path: '',
     redirectTo: '/home',
     pathMatch: 'full'
   },
-  { path: 'play', loadChildren: () => import('./play/play.module').then(m => m.PlayModule) },
 ];
 
 @NgModule({

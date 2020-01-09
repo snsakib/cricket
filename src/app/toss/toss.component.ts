@@ -17,7 +17,9 @@ export class TossComponent implements OnInit {
   }
 
   startMatch() {
-    this.router.navigate(["/play", this.battingTeam]);
+    const date = new Date();
+    const uuid = `${this.teams[0]}-${this.teams[1]}-${date}`;
+    this.router.navigate([`/play/${uuid}`, { uuid: uuid, battingTeam: this.battingTeam}]);
   }
 
   ngOnInit() {}
