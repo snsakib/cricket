@@ -122,5 +122,10 @@
       }
     }
   },
-  "defaultProject": "cricket"
+  "defaultProject": "cricket",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
