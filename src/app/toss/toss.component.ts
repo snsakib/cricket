@@ -11,8 +11,8 @@ export class TossComponent implements OnInit {
 
   constructor(private router: Router) {}
 
-  onSelectTeam($event: Event) {
-    localStorage.setItem('battingTeam', event.target.value);
+  onSelectTeam(team) {
+    localStorage.setItem('battingTeam', team);
     console.log('batting: ' + localStorage.getItem('battingTeam'));
   }
 
